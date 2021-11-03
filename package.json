@@ -1,8 +1,8 @@
 {
   "name": "rn-star-fruit-elements",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The special package for star fruit app",
-  "main": "lib/src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
     "build": "tsc",
@@ -45,5 +45,5 @@
   "dependencies": {
     "react-native-fast-image": "^8.5.11"
   },
-  "types": "index.d.ts"
+  "types": "src/index.ts"
 }
