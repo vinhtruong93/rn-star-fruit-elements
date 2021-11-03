@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Animated, ImageSourcePropType, Platform, StyleProp } from 'react-native';
-import FastImage, { ImageStyle, ResizeMode } from 'react-native-fast-image'
+import { Animated, Image, ImageResizeMode, ImageSourcePropType, ImageStyle, Platform, StyleProp } from 'react-native';
+// import FastImage, { ImageStyle, ResizeMode } from 'react-native-fast-image'
 
 const SIZE_UNIT = {
   /**
@@ -30,7 +30,7 @@ interface IProps {
   source: ImageSourcePropType;
   style?: StyleProp<ImageStyle>;
   rounded?: boolean,
-  resizeMode?: ResizeMode;
+  resizeMode?: ImageResizeMode;
   animatedIntegrated?: boolean;
   /**
    * Dùng để hiển thị chữ cái đầu in hoa nếu trường hợp không load được hình ảnh hoặc url undefined
@@ -65,7 +65,7 @@ export default class Avatar extends Component<IProps, IState> {
     const imageAble = this.ImagePossible;
     if (imageAble) {
       const { hasError } = this.state;
-      const SafeImage = this.props.animatedIntegrated ? Animated.Image as any : FastImage;
+      const SafeImage = this.props.animatedIntegrated ? Animated.Image as any : Image;
       return Platform.select({
         android:
           <SafeImage
@@ -100,7 +100,7 @@ export default class Avatar extends Component<IProps, IState> {
           />,
       });
     } else {
-      return <FastImage
+      return <Image
         style={[
           {
             borderRadius: this.props.rounded ? size / 2 : undefined,

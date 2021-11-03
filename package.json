@@ -1,8 +1,8 @@
 {
   "name": "rn-star-fruit-elements",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "The special package for star fruit app",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
     "build": "tsc",
@@ -32,7 +32,7 @@
     "metro-react-native-babel-preset": "^0.66.2",
     "react": "*",
     "react-native": "*",
-    "react-native-fast-image": "^8.5.11",
+    "react-native-fast-image": "*",
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-react": "^4.1.0",
@@ -41,8 +41,9 @@
   "peerDependencies": {
     "react": ">=16.0.0",
     "react-native": ">=0.60.0",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.3",
+    "react-native-fast-image": "*"
   },
   "dependencies": {},
-  "types": "src/index.ts"
+  "types": "index.d.ts"
 }
