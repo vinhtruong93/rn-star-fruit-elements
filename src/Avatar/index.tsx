@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Animated, ImageSourcePropType, Platform, StyleProp } from 'react-native';
 import FastImage, { ImageStyle, ResizeMode } from 'react-native-fast-image'
-import assets from '../../assets';
+import assets from '../assets';
 
 const SIZE_UNIT = {
   /**
