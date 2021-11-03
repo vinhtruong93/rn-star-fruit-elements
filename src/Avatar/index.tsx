@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Animated, ImageSourcePropType, Platform, StyleProp } from 'react-native';
 import FastImage, { ImageStyle, ResizeMode } from 'react-native-fast-image'
-import assets from '../assets';
 
 const SIZE_UNIT = {
   /**
@@ -70,8 +69,8 @@ export default class Avatar extends Component<IProps, IState> {
       return Platform.select({
         android:
           <SafeImage
-            defaultSource={assets.account_placeholder} // Note: On Android, the default source prop is ignored on debug builds.
-            source={hasError ? assets.account_placeholder : this.props.source}
+            defaultSource={require('../../assets/account_placeholder.png')} // Note: On Android, the default source prop is ignored on debug builds.
+            source={hasError ? require('../../assets/account_placeholder.png') : this.props.source}
             resizeMode={this.props.resizeMode}
             style={[
               {
@@ -86,8 +85,8 @@ export default class Avatar extends Component<IProps, IState> {
         ,
         ios:
           <SafeImage
-            defaultSource={assets.account_placeholder}
-            source={hasError ? assets.account_placeholder : this.props.source}
+            defaultSource={require('../../assets/account_placeholder.png')}
+            source={hasError ? require('../../assets/account_placeholder.png') : this.props.source}
             resizeMode={this.props.resizeMode}
             style={[
               {
@@ -110,7 +109,7 @@ export default class Avatar extends Component<IProps, IState> {
           },
           this.props.style,
         ]}
-        source={assets.account_placeholder} />
+        source={require('../../assets/account_placeholder.png')} />
     }
   }
 
