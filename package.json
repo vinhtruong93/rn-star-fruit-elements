@@ -1,6 +1,6 @@
 {
   "name": "rn-star-fruit-elements",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "The special package for star fruit app",
   "main": "index.js",
   "scripts": {
