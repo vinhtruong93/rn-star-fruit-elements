@@ -23,10 +23,9 @@ const PLACE_HOLDER_TEXT_SIZE = {
   large: 22,
 };
 
-type Size = keyof typeof SIZE_UNIT;
-
+export type AvatarSizeType = keyof typeof SIZE_UNIT;
 interface IProps {
-  size?: number | Size;
+  size?: number | AvatarSizeType;
   source: ImageSourcePropType;
   style?: StyleProp<ImageStyle>;
   rounded?: boolean,
