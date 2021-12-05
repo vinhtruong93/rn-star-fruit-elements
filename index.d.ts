@@ -1,3 +1,4 @@
+export { ThemeProvider, ThemeContextType, Consumer } from './src/Context';
 export { default as Avatar } from './src/Avatar';
 export { default as Button } from './src/Button';
 export { default as Header } from './src/Header';
